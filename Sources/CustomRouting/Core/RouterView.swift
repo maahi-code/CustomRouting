@@ -101,7 +101,7 @@ public struct RouterView<Content: View> : View, Router {
         self.alertOption = option
         self.alert = AnyAppAlert(title: title, subtitle: subtitle, button: button)
     }
-    public func dimissAlert() {
+    public func dismissAlert() {
         alert = nil
     }
     
