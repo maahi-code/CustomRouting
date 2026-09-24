@@ -17,7 +17,7 @@ extension View {
                     alert.wrappedValue?.title ?? "",
                     isPresented: Binding(ifNotNil: alert)
                 ) {
-                    alert.wrappedValue?.button()
+                    alert.wrappedValue?.buttons()
                 } message: {
                     if let subtitle = alert.wrappedValue?.subtitle {
                         Text(subtitle)
@@ -29,7 +29,7 @@ extension View {
                     alert.wrappedValue?.title ?? "",
                     isPresented: Binding(ifNotNil: alert)
                 ) {
-                    alert.wrappedValue?.button()
+                    alert.wrappedValue?.buttons()
                 } message: {
                     if let subtitle = alert.wrappedValue?.subtitle {
                         Text(subtitle)

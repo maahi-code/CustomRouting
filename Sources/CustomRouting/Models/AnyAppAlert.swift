@@ -10,16 +10,16 @@ import SwiftUI
 struct AnyAppAlert: Sendable {
     var title: String
     var subtitle: String?
-    var button: @Sendable () -> AnyView
+    var buttons: @Sendable () -> AnyView
 
     init(
         title: String,
         subtitle: String? = nil,
-        button: (@Sendable () -> AnyView)? = nil
+        buttons: (@Sendable () -> AnyView)? = nil
     ) {
         self.title = title
         self.subtitle = subtitle
-        self.button = button ?? {
+        self.buttons = buttons ?? {
             AnyView(
                 Button("Ok") { }
             )
@@ -30,7 +30,7 @@ struct AnyAppAlert: Sendable {
         self.init(
             title: "Error",
             subtitle: error.localizedDescription,
-            button: nil
+            buttons: nil
         )
     }
 }

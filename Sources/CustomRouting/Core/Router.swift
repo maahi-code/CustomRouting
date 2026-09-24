@@ -18,7 +18,7 @@ struct MockRouter: Router {
     func dismissScreen() {
         print("Mock Router don't work!!!")
     }
-    func showAlert(_ option: AlertType,  title: String, subtitle: String? = nil, button: (@Sendable () -> AnyView)? = nil) {
+    func showAlert(_ option: AlertType,  title: String, subtitle: String? = nil, buttons: (@Sendable () -> AnyView)? = nil) {
         print("Mock Router don't work!!!")
     }
     func dismissAlert() {
@@ -37,7 +37,7 @@ struct MockRouter: Router {
 public protocol Router {
     func showScreen<T: View>(_ segue: SegueOption, @ViewBuilder destination: @escaping (Router) -> T)
     func dismissScreen()
-    func showAlert(_ option: AlertType,  title: String, subtitle: String?, button: (@Sendable () -> AnyView)?) 
+    func showAlert(_ option: AlertType,  title: String, subtitle: String?, buttons: (@Sendable () -> AnyView)?)
     func dismissAlert()
     func showModal<T: View>(backgroundColor: Color, transition: AnyTransition, @ViewBuilder destination: @escaping () -> T)
     func dismissModal()

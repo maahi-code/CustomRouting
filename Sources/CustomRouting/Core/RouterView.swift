@@ -97,9 +97,9 @@ public struct RouterView<Content: View> : View, Router {
     public func dismissScreen() {
         dismiss()
     }
-    public func showAlert(_ option: AlertType,  title: String, subtitle: String? = nil, button: (@Sendable () -> AnyView)? = nil) {
+    public func showAlert(_ option: AlertType,  title: String, subtitle: String? = nil, buttons: (@Sendable () -> AnyView)? = nil) {
         self.alertOption = option
-        self.alert = AnyAppAlert(title: title, subtitle: subtitle, button: button)
+        self.alert = AnyAppAlert(title: title, subtitle: subtitle, buttons: buttons)
     }
     public func dismissAlert() {
         alert = nil
